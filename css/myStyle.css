@@ -1,0 +1,33 @@
+.container {
+	text-align: center;
+	font-family: 'Poiret One', cursive;
+	margin-top: 200px;
+	width: 70%;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 15px;
+	padding-bottom: 15px;
+}
+
+body {
+	background: url('../img/alice.jpg') no-repeat;
+	background-position: 50%  20%  ;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 15px;
+	color: #fff;
+}
+
+.lead{
+	color: #fff;
+}
+
+input{
+	margin-bottom: 20px;
+}
+
+.btn {
+	margin: 5px;
+	width: 70px;
+}
