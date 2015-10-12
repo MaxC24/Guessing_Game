@@ -49,7 +49,7 @@ tryBtn.on('click', function() {
 		counter += 1;
 		prevGuesses.push(playerNum);
 		if(playerNum === guessNum){
-			$('#message').text("YOU WON! You have tried " + counter + " times\nYou can try again if you want.");
+			$('#message').text("YOU WON! You have tried " + counter + " times. You can try again if you want.");
 			guessNum = reset();
 		} else if (Math.abs(playerNum - guessNum) < 5){
 			$('#message').text("Extremely hot! You have tried " + counter + " times. " + highLow);
