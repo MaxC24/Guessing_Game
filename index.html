@@ -13,17 +13,17 @@
 	<body>
 		<div class="container">
 			<h1>GUESSING GAME</h1>
-			
-				
 			<p class="lead">Try guessing the number from 1 to 100 <br> Be smart you only have 5 chances</p>
-			<input></input>
-			<a href="#" class="btn btn-default" role="button">TRY</a>
-			<br>
-			<a href="#" class="btn btn-default" role="button">RESET</av>
-			<a href="#" class="btn btn-default" role="button">HINT</a>
-		
-			
+			<input id= "player-input"/>
+			<a href="#" class="btn btn-default" id="try" role="button">TRY</a>
+			<div>
+				<a href="#" class="btn btn-default" id="reset" role="button">RESET</a>
+				<a href="#" class="btn btn-default" id="hint" role="button">HINT</a>
+			</div>
+			<p id="message" class="lead"></p>
 		</div>
+		<script src="javascript/jquery-2.1.4.min.js"></script>
+		<script src="javascript/application.js"></script>
 	</body>
 
 </html>

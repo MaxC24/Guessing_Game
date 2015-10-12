@@ -31,3 +31,7 @@ input{
 	margin: 5px;
 	width: 70px;
 }
+
+#message {
+	margin-top: 30px;
+}
