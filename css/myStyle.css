@@ -35,3 +35,8 @@ input{
 #message {
 	margin-top: 30px;
 }
+
+#alice{
+	display: none;
+	width: 300px;
+}

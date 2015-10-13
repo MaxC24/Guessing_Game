@@ -21,6 +21,8 @@ tryBtn.on('click', function() {
 	var highLow;
 	var canPlay = true;
 
+	$("#alice").slideUp("slow");
+
 	for (var i in prevGuesses){
 		if (prevGuesses[i] === playerNum) {
 			$('#message').text("You have already used this number.");
@@ -31,13 +33,13 @@ tryBtn.on('click', function() {
 	if(playerNum > 100){
 		$('#message').text("The number is too big, it should be between 1 and 100")
 		canPlay = false;
-	} else if (playerNum < 0){
+	} else if (playerNum < 1){
 		$('#message').text("the number is too small, it should be between 1 and 100");
 		canPlay = false;
 	} else if (isNaN(playerNum)) {
 		canPlay = false;
 		$('#message').text("That is not a number. Try again.");
-	}
+	} 
 
 	if (playerNum < guessNum){
 		highLow = "Try Higher";
@@ -49,7 +51,8 @@ tryBtn.on('click', function() {
 		counter += 1;
 		prevGuesses.push(playerNum);
 		if(playerNum === guessNum){
-			$('#message').text("YOU WON! You have tried " + counter + " times. You can try again if you want.");
+			$('#alice').slideDown("slow");
+			$('#message').text("YOU WON! You have tried " + counter + " times. Play again.");
 			guessNum = reset();
 		} else if (Math.abs(playerNum - guessNum) < 5){
 			$('#message').text("Extremely hot! You have tried " + counter + " times. " + highLow);
@@ -75,6 +78,7 @@ resetBtn.on('click', function(){
 	guessNum = reset();
 	$('#message').text("");
 	$('#player-input').val("");
+	$("#alice").slideUp("slow");
 });
 
 hintBtn.on('click', function() {
