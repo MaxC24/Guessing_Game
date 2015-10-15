@@ -1,7 +1,7 @@
 
 
 var guessNum = reset();
-var counter = 0;
+var counter = 1;
 var prevGuesses = [];
 
 function reset() {
@@ -47,7 +47,7 @@ tryBtn.on('click', function() {
 		highLow = "Try Lower";
 	} 
 
-	if(counter < 5 && canPlay === true){
+	if(counter < 6 && canPlay === true){
 		counter += 1;
 		prevGuesses.push(playerNum);
 		if(playerNum === guessNum){
@@ -69,9 +69,12 @@ tryBtn.on('click', function() {
 		} else if (Math.abs(playerNum - guessNum) < 100){
 			$('#message').text("Frozen! You have tried " + counter + " times. " + highLow);
 		}
-	} else if (counter === 5){
-		$('#message').text("You have tried too many times. To continue press RESET");
+	} 
+	
+	if (counter === 5) {
+		$('#message').text("YOU LOST! You tried " + counter + " times. To continue press RESET");
 	}
+	
 });
 
 resetBtn.on('click', function(){
